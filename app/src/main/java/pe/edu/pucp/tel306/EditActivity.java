@@ -33,11 +33,19 @@ public class EditActivity extends AppCompatActivity {
                 String textoIntTrabajoPart1 = spliteoA[0];
                 String textoIntTrabajoPart2 = spliteoA[1];
 
-                if (Integer.parseInt(textoIntTrabajoPart1) >= 0 && Integer.parseInt(textoIntTrabajoPart1) <= 60 && Integer.parseInt(textoIntTrabajoPart2) >= 0 && Integer.parseInt(textoIntTrabajoPart2) <= 60) {
-                    flag1 = false;
-                } else {
+
+
+                if(textoIntTrabajoPart1 == "" || textoIntTrabajoPart2 == ""){
                     textView1.setError("Ingrese un tiempo válido, formato mm:ss");
+                }else{
+                    if (Integer.parseInt(textoIntTrabajoPart1) >= 0 && Integer.parseInt(textoIntTrabajoPart1) <= 60 && Integer.parseInt(textoIntTrabajoPart2) >= 0 && Integer.parseInt(textoIntTrabajoPart2) <= 60) {
+                        flag1 = false;
+                    } else {
+                        textView1.setError("Ingrese un tiempo válido, formato mm:ss");
+                    }
                 }
+
+
 
                 Boolean flag2 = true;
                 String textoIntervDescanso = textView2.getText().toString();
@@ -46,11 +54,17 @@ public class EditActivity extends AppCompatActivity {
                 String textoIntervDescansoPart2 = spliteoB[1];
 
 
-                if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) <= 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) <= 60) {
-                    flag2 = false;
-                } else {
-                    textView2.setError("Ingrese un tiempo válido, formato mm:ss");
 
+
+                if(textoIntervDescansoPart1 == "" || textoIntervDescansoPart2 ==""){
+                    textView2.setError("Ingrese un tiempo válido, formato mm:ss");
+                } else {
+                    if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) <= 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) <= 60) {
+                        flag2 = false;
+                    } else {
+                        textView2.setError("Ingrese un tiempo válido, formato mm:ss");
+
+                    }
                 }
 
 
