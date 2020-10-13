@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Lab3G2</string>
     <string name="help">Help</string>
+    <string name="tit">¿Qué es Pomodoro Timer PUCP?</string>
+    <string-array name="elementos">
+        <item>Temporizador Pomodoro PUCP en línea</item>
+        <item>Acerca de la Técnica Pomodoro</item>
+        <item>Cómo utilizar los temporizadores Pomodoro PUCP</item>
+    </string-array>
+    <string name="todo_info"></string>
 </resources>
