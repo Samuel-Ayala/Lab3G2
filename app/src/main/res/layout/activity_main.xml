@@ -10,27 +10,27 @@
         android:id="@+id/textViewCiclo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Ciclo Pomodoro 1 de 4"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textViewFrases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="28dp"
         android:text="..."
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="251dp"
-        android:layout_height="198dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,11 +50,12 @@
             android:layout_height="wrap_content"
             android:text="25:00"
             android:textAlignment="center"
-            android:textSize="60sp" />
+            android:textColor="#292929"
+            android:textSize="100sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="100dp">
 
             <Button
                 android:id="@+id/buttonRestart"
@@ -72,8 +73,7 @@
                 android:layout_height="53dp"
                 android:background="@android:drawable/ic_media_play"
                 android:backgroundTint="#A69F9F"
-                android:onClick="startTimer"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/buttonPause"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -91,5 +91,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En descanso..."
+        android:textColor="#44B849"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
