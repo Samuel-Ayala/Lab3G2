@@ -42,19 +42,17 @@ public class EditActivity extends AppCompatActivity {
                     String[] spliteoA = textoIntTrabajo.split(":");
                     String textoIntTrabajoPart1 = spliteoA[0];
                     String textoIntTrabajoPart2 = spliteoA[1];
-
-
                     if (spliteoA.length < 2) {
                         textView1.setError("Ingrese un tiempo válido, formato mm:ss");
                     } else if (spliteoA.length == 2) {
                         if (Integer.parseInt(textoIntTrabajoPart1) >= 0 && Integer.parseInt(textoIntTrabajoPart1) < 60 && Integer.parseInt(textoIntTrabajoPart2) >= 0 && Integer.parseInt(textoIntTrabajoPart2) < 60) {
                             flag1 = false;
                         } else {
-                            textView1.setError("Valor de tiempo debe estar en '0' y '59', formato mm:ss");
+                            textView1.setError("Valor de tiempo debe estar en '0' y '59'");
                         }
                     }
                 } catch (ArrayIndexOutOfBoundsException f) {
-                    textView1.setError("Ingrese un tiempo válido, formato mm:ss");
+                    textView1.setError("Debe completar los valores de minutos y segundos, formato mm:ss");
                 }
 
                 ////FIN PRIMER CAMPO//////
@@ -72,15 +70,15 @@ public class EditActivity extends AppCompatActivity {
                     if (spliteoB.length < 2) {
                         textView2.setError("Ingrese un tiempo válido, formato mm:ss");
                     } else if (spliteoB.length == 2) {
-                        if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) <= 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) <= 60) {
+                        if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) < 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) < 60) {
                             flag2 = false;
                         } else {
-                            textView2.setError("Ingrese un tiempo válido, formato mm:ss");
+                            textView2.setError("Valor de tiempo debe estar en '0' y '59'.");
 
                         }
                     }
                 } catch (ArrayIndexOutOfBoundsException f) {
-                    textView2.setError("Ingrese un tiempo válido, formato mm:ss");
+                    textView2.setError("Debe completar los valores de minutos y segundos, formato mm:ss");
                 }
                 ////FIN SEGUNDO CAMPO/////
 

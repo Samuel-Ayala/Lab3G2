@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
             "¿Qué crees que crece más rápido en tu cuerpo? La respuesta no son las uñas. En realidad, el vello facial crece mucho más rápido que el de cualquier otra parte del cuerpo.",
             "Los elefantes son maravillosos y a nuestros ojos, parecen gigantes. Sin embargo, pesan menos que la lengua de una ballena azul."};
 
-    private static final String[] concentracion = {"motivacion 1", "motivacion 2"};
-    private static final String[] msgDescanso = {"descanso 1", "descanso 2"};
+    private static final String[] concentracion = {"Una mente llena de dudas no se puede concentrar en la victoria.", "Son los que se concentran en una cosa a la vez los que avanzan en este mundo","Recuerda que siempre parece imposible hasta que se intenta, ¡no te rindas!",
+    "Manten los ojos en el camino."};
+    private static final String[] msgDescanso = {"Emplea todos tus esfuerzos, incluso cuando las posibilidades jueguen en tu contra", "Ten paciencia; todas las cosas son difíciles hasta que se hacen fáciles","La perseverancia es caer 19 veces y levantarse 20 ",
+    "Esfuérzate al máximo. Lo que siembres hoy dará sus frutos mañana"};
 
 
     private ActionMode mactionMode;

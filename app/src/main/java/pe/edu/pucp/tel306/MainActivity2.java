@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (sobreLaApp.getSelectedItem().toString().equals("Temporizador Pomodoro PUCP en línea")){
                     textView.setText(texto1);
-                }else if (sobreLaApp.getSelectedItem().toString().equals("Acerca de la Técnica Pomodoro PUCP")){
+                }else if (sobreLaApp.getSelectedItem().toString().equalsIgnoreCase("Acerca de la Técnica Pomodoro")){
                     textView.setText(texto2);
                 }else {
                     textView.setText(texto3);
