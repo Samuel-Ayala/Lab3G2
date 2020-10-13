@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Ingrese cantidad"
-        android:inputType="textPersonName"
+        android:inputType="number|textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
