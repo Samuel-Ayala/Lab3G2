@@ -35,48 +35,56 @@ public class EditActivity extends AppCompatActivity {
                 TextView textView1 = findViewById(R.id.editTextIntTrabajo);
                 TextView textView2 = findViewById(R.id.editTextIntervDescanso);
                 TextView textView3 = findViewById(R.id.editTextCiclosPomodoros);
-
+                ///INICIO PRIMER CAMPO////
                 Boolean flag1 = true;
                 String textoIntTrabajo = textView1.getText().toString();
-                Log.d("msg", "Este es un debug " + textoIntTrabajo);
-                String[] spliteoA = textoIntTrabajo.split(":");
-                String textoIntTrabajoPart1 = spliteoA[0];
-                String textoIntTrabajoPart2 = spliteoA[1];
+                try {
+                    String[] spliteoA = textoIntTrabajo.split(":");
+                    String textoIntTrabajoPart1 = spliteoA[0];
+                    String textoIntTrabajoPart2 = spliteoA[1];
 
 
-
-                if(textoIntTrabajoPart1 == "" || textoIntTrabajoPart2 == ""){
-                    textView1.setError("Ingrese un tiempo válido, formato mm:ss");
-                }else{
-                    if (Integer.parseInt(textoIntTrabajoPart1) >= 0 && Integer.parseInt(textoIntTrabajoPart1) <= 60 && Integer.parseInt(textoIntTrabajoPart2) >= 0 && Integer.parseInt(textoIntTrabajoPart2) <= 60) {
-                        flag1 = false;
-                    } else {
+                    if (spliteoA.length < 2) {
                         textView1.setError("Ingrese un tiempo válido, formato mm:ss");
+                    } else if (spliteoA.length == 2) {
+                        if (Integer.parseInt(textoIntTrabajoPart1) >= 0 && Integer.parseInt(textoIntTrabajoPart1) < 60 && Integer.parseInt(textoIntTrabajoPart2) >= 0 && Integer.parseInt(textoIntTrabajoPart2) < 60) {
+                            flag1 = false;
+                        } else {
+                            textView1.setError("Valor de tiempo debe estar en '0' y '59', formato mm:ss");
+                        }
                     }
+                } catch (ArrayIndexOutOfBoundsException f) {
+                    textView1.setError("Ingrese un tiempo válido, formato mm:ss");
                 }
 
+                ////FIN PRIMER CAMPO//////
 
-
+                ///INICIO SEGUNDO CAMPO////
                 Boolean flag2 = true;
                 String textoIntervDescanso = textView2.getText().toString();
-                String[] spliteoB = textoIntervDescanso.split(":");
-                String textoIntervDescansoPart1 = spliteoB[0];
-                String textoIntervDescansoPart2 = spliteoB[1];
+
+                try {
+                    String[] spliteoB = textoIntervDescanso.split(":");
+                    String textoIntervDescansoPart1 = spliteoB[0];
+                    String textoIntervDescansoPart2 = spliteoB[1];
 
 
-
-
-                if(textoIntervDescansoPart1 == "" || textoIntervDescansoPart2 ==""){
-                    textView2.setError("Ingrese un tiempo válido, formato mm:ss");
-                } else {
-                    if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) <= 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) <= 60) {
-                        flag2 = false;
-                    } else {
+                    if (spliteoB.length < 2) {
                         textView2.setError("Ingrese un tiempo válido, formato mm:ss");
+                    } else if (spliteoB.length == 2) {
+                        if (Integer.parseInt(textoIntervDescansoPart1) >= 0 && Integer.parseInt(textoIntervDescansoPart1) <= 60 && Integer.parseInt(textoIntervDescansoPart2) >= 0 && Integer.parseInt(textoIntervDescansoPart2) <= 60) {
+                            flag2 = false;
+                        } else {
+                            textView2.setError("Ingrese un tiempo válido, formato mm:ss");
 
+                        }
                     }
+                } catch (ArrayIndexOutOfBoundsException f) {
+                    textView2.setError("Ingrese un tiempo válido, formato mm:ss");
                 }
+                ////FIN SEGUNDO CAMPO/////
 
+                ////INICIO TERCER CAMPO ////
 
                 Boolean flag3 = true;
                 int ciclosPromodoros = 0;
@@ -86,7 +94,9 @@ public class EditActivity extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     textView3.setError("Ingrese un número.");
                 }
+                ////FIN TERCER CAMPO////
 
+                ///INICIO ENVIAR VALORES///
 
                 if (flag1 == false && flag2 == false && flag3 == false) {
                     intent.putExtra("limit", getTimelong(textoIntTrabajo));
@@ -95,6 +105,8 @@ public class EditActivity extends AppCompatActivity {
                     setResult(RESULT_OK, intent);
                     finish();
                 }
+
+                ////FIN ENVIAR VALORES////
             }
         });
 
@@ -110,9 +122,9 @@ public class EditActivity extends AppCompatActivity {
         if (seconds < 10) {
             splitstr = ":0";
         }
-        String timeStr=minutes+splitstr+seconds;
-        if (minutes<10){
-            timeStr="0"+timeStr;
+        String timeStr = minutes + splitstr + seconds;
+        if (minutes < 10) {
+            timeStr = "0" + timeStr;
         }
         return timeStr;
     }
@@ -121,7 +133,7 @@ public class EditActivity extends AppCompatActivity {
         String[] spliteoB = time.split(":");
         String min = spliteoB[0];
         String seg = spliteoB[1];
-        return (Long.parseLong(min)*60 + Long.parseLong(seg))*1000;
+        return (Long.parseLong(min) * 60 + Long.parseLong(seg)) * 1000;
 
 
     }
