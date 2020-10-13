@@ -1,107 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewCiclo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Ciclo Pomodoro 1 de 4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewFrases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="..."
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="251dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textViewdescanso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tiempo de descanso: 05:00"
-            android:textAlignment="center" />
+            android:id="@+id/textViewCiclo"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="16dp"
+            android:text="Ciclo Pomodoro 1 de 4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <TextView
-            android:id="@+id/textViewTimer"
-            android:layout_width="match_parent"
+            android:id="@+id/textViewFrases"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="25:00"
-            android:textAlignment="center"
-            android:textColor="#292929"
-            android:textSize="100sp" />
+            android:layout_marginBottom="28dp"
+            android:text="..."
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/buttonRestart"
-                android:layout_width="64dp"
-                android:layout_height="53dp"
-                android:background="@android:drawable/ic_menu_revert"
-                android:backgroundTint="#7A7A7A"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textViewdescanso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiempo de descanso: 05:00"
+                android:textAlignment="center" />
 
-            <Button
-                android:id="@+id/buttonPlay"
-                android:layout_width="64dp"
-                android:layout_height="53dp"
-                android:background="@android:drawable/ic_media_play"
-                android:backgroundTint="#A69F9F"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/buttonPause"
-                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="25:00"
+                android:textAlignment="center"
+                android:textColor="#292929"
+                android:textSize="100sp" />
 
-            <Button
-                android:id="@+id/buttonPause"
-                android:layout_width="64dp"
-                android:layout_height="53dp"
-                android:background="@android:drawable/ic_media_pause"
-                android:backgroundTint="#A69F9F"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
 
-    </LinearLayout>
+                <Button
+                    android:id="@+id/buttonRestart"
+                    android:layout_width="64dp"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/ic_menu_revert"
+                    android:backgroundTint="#7A7A7A"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewRest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="En descanso..."
-        android:textColor="#44B849"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/buttonPlay"
+                    android:layout_width="64dp"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/ic_media_play"
+                    android:backgroundTint="#A69F9F"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/buttonPause"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/buttonPause"
+                    android:layout_width="64dp"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/ic_media_pause"
+                    android:backgroundTint="#A69F9F"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewRest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En descanso..."
+            android:textColor="#44B849"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutimg"
+            android:layout_width="196dp"
+            android:layout_height="139dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/ic_descansoimg" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
