@@ -198,14 +198,22 @@ public class MainActivity extends AppCompatActivity {
                         }
                         isResting = false;
                     }
-
+                    if (!isResting) {
+                        ((TextView) findViewById(R.id.textViewFrases)).setText(concentracion[r.nextInt(concentracion.length)]);
+                        findViewById(R.id.imageDescanso).setVisibility(View.GONE);
+                    } else {
+                        ((TextView) findViewById(R.id.textViewFrases)).setText(msgDescanso[r.nextInt(msgDescanso.length)]);
+                        findViewById(R.id.imageDescanso).setVisibility(View.VISIBLE);
+                    }
 
                 } else {
                     if (lg % (1000 * 5) == 0) {
                         if (!isResting) {
                             ((TextView) findViewById(R.id.textViewFrases)).setText(concentracion[r.nextInt(concentracion.length)]);
+                            findViewById(R.id.imageDescanso).setVisibility(View.GONE);
                         } else {
                             ((TextView) findViewById(R.id.textViewFrases)).setText(msgDescanso[r.nextInt(msgDescanso.length)]);
+                            findViewById(R.id.imageDescanso).setVisibility(View.VISIBLE);
                         }
                     }
                     time = lg;
