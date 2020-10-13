@@ -7,5 +7,17 @@
         <item>Acerca de la Técnica Pomodoro</item>
         <item>Cómo utilizar los temporizadores Pomodoro PUCP</item>
     </string-array>
-    <string name="todo_info"></string>
+    <string name="todo_info">.</string>
+    <string name="volver_a_p_gina_principal">Volver a página principal</string>
+    <string name="ciclo_pomodoro_1_de_4">Ciclo Pomodoro 1 de 4</string>
+    <string name="tiempo_de_descanso_05_00">Tiempo de descanso: 05:00</string>
+    <string name="tiempodescanso">...</string>
+    <string name="_25_00">25:00</string>
+    <string name="en_descanso">En descanso...</string>
+    <string name="intervalo_de_trabajo">Intervalo de trabajo:</string>
+    <string name="intervalo_de_descanso">Intervalo de descanso:</string>
+    <string name="mm_ss">mm:ss</string>
+    <string name="ciclos_pomodoros">Ciclos Pomodoros:</string>
+    <string name="guardar">Guardar</string>
+    <string name="ingrese_cantidad">Ingrese cantidad</string>
 </resources>

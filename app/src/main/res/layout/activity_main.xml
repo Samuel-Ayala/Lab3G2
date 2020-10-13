@@ -16,7 +16,7 @@
             android:layout_height="19dp"
             android:layout_marginTop="140dp"
             android:layout_marginEnd="16dp"
-            android:text="Ciclo Pomodoro 1 de 4"
+            android:text="@string/ciclo_pomodoro_1_de_4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="28dp"
-            android:text="..."
+            android:text="@string/tiempodescanso"
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,14 +46,14 @@
                 android:id="@+id/textViewdescanso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tiempo de descanso: 05:00"
+                android:text="@string/tiempo_de_descanso_05_00"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textViewTimer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="25:00"
+                android:text="@string/_25_00"
                 android:textAlignment="center"
                 android:textColor="#292929"
                 android:textSize="100sp" />
@@ -101,7 +101,7 @@
             android:id="@+id/textViewRest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="En descanso..."
+            android:text="@string/en_descanso"
             android:textColor="#44B849"
             android:textSize="24sp"
             android:textStyle="italic"

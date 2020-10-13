@@ -64,7 +64,7 @@
         android:id="@+id/button2"
         android:layout_width="458dp"
         android:layout_height="45dp"
-        android:text="Volver a página principal"
+        android:text="@string/volver_a_p_gina_principal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
